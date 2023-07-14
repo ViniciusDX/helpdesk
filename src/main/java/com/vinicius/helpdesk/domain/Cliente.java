@@ -1,5 +1,6 @@
 package com.vinicius.helpdesk.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.vinicius.helpdesk.domain.enums.Perfil;
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
@@ -15,6 +16,7 @@ public class Cliente extends Pessoa {
 
     private static final long serialVersionUID = 1L;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "cliente")
     private List<Chamado> chamados = new ArrayList<>();
 
