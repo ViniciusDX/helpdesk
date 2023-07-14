@@ -13,7 +13,7 @@ public enum Prioridade {
     private Integer codigo;
     private String descricao;
 
-    public static Prioridade toEnum(Long cod) {
+    public static Prioridade toEnum(Integer cod) {
         if (cod == null) {
             return null;
         }

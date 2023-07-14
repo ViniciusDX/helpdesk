@@ -14,7 +14,7 @@ public enum Status {
     private Integer codigo;
     private String descricao;
 
-    public static Status toEnum(Long cod) {
+    public static Status toEnum(Integer cod) {
         if (cod == null) {
             return null;
         }
