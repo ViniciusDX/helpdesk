@@ -3,8 +3,7 @@ package com.vinicius.helpdesk.domain.enums;
 import lombok.*;
 
 @Getter
-@AllArgsConstructor(access = AccessLevel.PRIVATE)
-@NoArgsConstructor(access = AccessLevel.PRIVATE)
+@AllArgsConstructor
 @ToString
 public enum Perfil {
     ADMIN(0, "ROLE_ADMIN"),
@@ -13,14 +12,6 @@ public enum Perfil {
 
     private Integer codigo;
     private String descricao;
-
-    public Integer getCodigo() {
-        return codigo;
-    }
-
-    public String getDescricao() {
-        return descricao;
-    }
 
     public static Perfil toEnum(Integer cod) {
         if (cod == null) {
